@@ -1,0 +1,185 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed ;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 4vw;
+
+    background-color: rgba(0, 0, 0, 0);
+
+/*    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.4)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
+
+    backdrop-filter: blur(15px);
+}
+
+/*NAVIGATION*/
+
+.nav_logo, .nav_links {
+    margin: 0 2rem;
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+}
+
+.nav_links {
+    display: flex;
+    font-size: 1.3rem;
+
+}
+
+.nav_link {
+    position: relative;
+
+    margin: 0 .5rem;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: opacity .2s linear;
+}
+
+.nav_link:hover {
+    opacity: .5;
+}
+
+/*ABOUT_PART*/
+
+.about_img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 40vh;
+
+    background: url("../img/about_pages/history_page/history_page_title.png") no-repeat;
+    background-size: cover;
+}
+
+.about_img:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40vh;
+    z-index: 90;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, .8);
+}
+
+.about_subblock_text {
+    height: 100%;
+    width: 78%;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.about_title {
+    margin: auto;
+    z-index: 91;
+
+    text-transform: uppercase;;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.about_main_part {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+
+    background: #0A0C15;
+
+    padding-top: 7vh;
+}
+
+.about_block {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 30vh;
+    width: 70%;
+
+    margin-bottom: 7vh;
+}
+
+.about_subblock_imgblock {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+    width: 20%;
+}
+
+.about_subblock_img {
+    height: 80%;
+    width: 100%;
+}
+
+.about_picture {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.about_subblock_caption {
+    height: 20%;
+    width: 100%;
+
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: Ubuntu, sans-serif;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    height: 20vh;
+
+    background: #0A0C15;
+
+    border-top: solid 0.02vh rgba(256, 256, 256, 0.2);
+}
+
+.footer_head_text {
+    font-size: 1.4rem;
+    margin: 1.5rem 2rem;
+}
+
+.footer_text {
+    margin: .5rem 2rem;
+}
+
+.footer_link {
+    font-family: 'Roboto Mono', monospace;
+}

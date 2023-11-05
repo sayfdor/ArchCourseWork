@@ -1,0 +1,199 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed ;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 4vw;
+
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(15px);
+}
+
+.nav_logo, .nav_links {
+    margin: 0 2rem;
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+}
+
+.nav_links {
+    display: flex;
+    font-size: 1.3rem;
+
+}
+
+.nav_link {
+    position: relative;
+
+    margin: 0 .5rem;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: opacity .2s linear;
+}
+
+.nav_link:hover {
+    opacity: .5;
+}
+
+.intro_title_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url("../img/index_img/yekat_title_img.jpeg") no-repeat;
+    background-size: cover;
+}
+
+.intro_title_container:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, .8);
+}
+
+.container_third {
+    display: flex;
+
+    width: 100%;
+    height: 30vh;
+}
+
+.intro_title {
+    margin: auto;
+    z-index: 91;
+
+    text-transform: uppercase;;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.title_section {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #0A0C15;
+}
+
+.title_container_line {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: auto;
+
+    width: 65%;
+}
+
+.title_container_cell {
+    display: flex;
+
+    position: relative;
+
+    width: 33vh;
+    height: 33vh;
+
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+
+    text-transform: none;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.title_container_text {
+    position: absolute;
+
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    color: white;
+
+    opacity: 0;
+}
+
+.title_container_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+
+    transition: scale .2s linear;
+}
+
+.title_container_cell .title_container_img {
+    transition: transform .2s linear,
+                opacity .2s linear;
+}
+
+.title_container_cell:hover .title_container_img {
+    transform: scale(1.2);
+    opacity: .2;
+}
+
+.title_container_cell .title_container_text {
+    transition: opacity .2s linear;
+}
+
+.title_container_cell:hover .title_container_text {
+    opacity: 1;
+}
+
+.title_container_cell:visited, .title_container_cell:focus {
+    color: #ffffff;
+}
+
+footer {
+    width: 100%;
+    height: 20vh;
+
+    background: #0A0C15;
+
+    border-top: solid 0.02vh rgba(256, 256, 256, 0.2);
+}
+
+
+.footer_head_text {
+    font-size: 1.4rem;
+    margin: 1.5rem 2rem;
+}
+
+.footer_text {
+    margin: .5rem 2rem;
+}
+
+.footer_link {
+    font-family: 'Roboto Mono', monospace;
+}
