@@ -14,7 +14,7 @@ header {
     z-index: 100;
 
     width: 100%;
-    height: 4vw;
+    height: 8vh;
 
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(15px);
@@ -65,7 +65,7 @@ header {
     content: '';
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 90;
     position: absolute;
     top: 0;
@@ -73,13 +73,6 @@ header {
     right: 0;
     bottom: 0;
     background-color:rgba(0, 0, 0, .8);
-}
-
-.container_third {
-    display: flex;
-
-    width: 100%;
-    height: 30vh;
 }
 
 .intro_title {
@@ -93,25 +86,23 @@ header {
 
 .title_section {
     display: flex;
-
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
     width: 100%;
-    height: 100vh;
 
     background: #0A0C15;
 }
 
-.title_container_line {
-    display: flex;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33vh);
+    grid-gap: 10vh;
 
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 10vh;
+
+    width: fit-content;
 
     margin: auto;
-
-    width: 65%;
 }
 
 .title_container_cell {
@@ -196,4 +187,59 @@ footer {
 
 .footer_link {
     font-family: 'Roboto Mono', monospace;
+}
+
+@media (max-width: 1000px) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 33vh);
+        grid-gap: 10vh;
+
+        width: fit-content;
+
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 655px) {
+
+    .intro_title {
+        margin: auto;
+        z-index: 91;
+
+        text-transform: uppercase;;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 50vh);
+        grid-gap: 10vh;
+
+        width: fit-content;
+
+        margin: auto;
+    }
+
+    .title_container_cell {
+        display: flex;
+
+        position: relative;
+
+        width: 50vh;
+        height: 33vh;
+
+        overflow: hidden;
+
+        justify-content: center;
+        align-items: center;
+
+        text-transform: none;
+
+        background: rgba(0, 0, 0, 0.1);
+    }
+
 }
