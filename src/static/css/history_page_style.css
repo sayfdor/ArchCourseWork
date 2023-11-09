@@ -1,10 +1,9 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     color: #ffffff;
+    background: #0A0C15;
     margin: 0;
 }
-
-/*HEADER*/
 
 header {
     display: flex;
@@ -16,13 +15,9 @@ header {
     z-index: 100;
 
     width: 100%;
-    height: 4vw;
+    height: 8vh;
 
     background-color: rgba(0, 0, 0, 0);
-
-/*    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.4)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
-
     backdrop-filter: blur(15px);
 }
 
@@ -39,7 +34,6 @@ header {
 .nav_links {
     display: flex;
     font-size: 1.3rem;
-
 }
 
 .nav_link {
@@ -124,7 +118,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    height: 30vh;
+    height: auto;
     width: 70%;
 
     margin-bottom: 7vh;
@@ -163,23 +157,71 @@ header {
 /*FOOTER*/
 
 footer {
-    width: 100%;
-    height: 20vh;
-
     background: #0A0C15;
 
+    width: 100%;
+}
+
+.footer_contacts {
     border-top: solid 0.02vh rgba(256, 256, 256, 0.2);
+
+    padding: 1rem 2rem;
+
+    margin: auto;
 }
 
 .footer_head_text {
     font-size: 1.4rem;
-    margin: 1.5rem 2rem;
+    margin-top: 0;
+    margin-bottom: .4rem;
 }
 
 .footer_text {
-    margin: .5rem 2rem;
+    margin-top: 0;
+    margin-bottom: .2rem;
 }
 
 .footer_link {
     font-family: 'Roboto Mono', monospace;
+}
+
+@media (max-width: 1000px) {
+    .nav_logo {
+        font-size: 1.2rem;
+    }
+
+    .nav_links {
+        font-size: 1rem;
+    }
+
+    .about_title {
+        font-size: 3rem;
+    }
+
+    .about_subblock_caption {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 680px) {
+    header {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .nav_logo {
+        font-size: 1rem;
+    }
+
+    .nav_links {
+        font-size: .9rem;
+    }
+
+    .about_title {
+        font-size: 2.5rem;
+    }
+
+    .about_subblock_caption {
+        font-size: 2rem;
+    }
 }
