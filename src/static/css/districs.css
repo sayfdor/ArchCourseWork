@@ -1,0 +1,215 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    background: #0A0C15;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed ;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 8vh;
+
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(15px);
+}
+
+.nav_logo, .nav_links {
+    margin: 0 2rem;
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+}
+
+.nav_links {
+    display: flex;
+    font-size: 1.3rem;
+}
+
+.nav_link {
+    position: relative;
+
+    margin: 0 .5rem;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: opacity .2s linear;
+}
+
+.nav_link:hover {
+    opacity: .5;
+}
+
+section {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.img_container {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 41%;
+    height: 84%;
+    margin: auto;
+}
+
+button {
+    position: absolute;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+    background: url("../img/about_pages/districs_page/dist_button_off.png") no-repeat;
+    background-size: cover;
+
+    z-index: 5;
+}
+
+button:active {
+    background: url("../img/about_pages/districs_page/dist_button_on.png") no-repeat;
+    background-size: cover;
+}
+
+.pop_up_container {
+    display: none;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+}
+
+.pop_up_container.active {
+    display: flex;
+}
+
+.pop_up_window {
+    position: relative;
+
+    display: flex;
+
+    width: 50%;
+    height: 50%;
+
+    background: white;
+
+    z-index: 10;
+}
+
+.pop_up_content {
+    position: absolute;
+
+    color: black;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 5vh 10vh;
+}
+
+.close_pop {
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+
+    color: black;
+
+    z-index: 15;
+
+    cursor: pointer;
+}
+
+.org_button {
+    top: 33%;
+}
+
+.zd_button {
+    top: 37%;
+    left: 41%;
+}
+
+.vi_button {
+    top: 50%;
+    left: 39%;
+}
+
+.len_button {
+    top: 64%;
+    left: 43%;
+}
+
+.chk_button {
+    top: 68%;
+    left: 51%;
+}
+
+.oct_button {
+    top: 68%;
+    left: 60%;
+}
+
+.kir_button {
+    top: 47%;
+    left: 55%;
+}
+
+footer {
+    background: #0A0C15;
+
+    width: 100%;
+}
+
+.footer_contacts {
+    border-top: solid .1vh rgba(256, 256, 256, 0.2);
+
+    padding: 1rem 2rem;
+
+    margin: auto;
+}
+
+.footer_head_text {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: .4rem;
+}
+
+.footer_text {
+    margin-top: 0;
+    margin-bottom: .2rem;
+}
+
+.footer_link {
+    font-family: 'Roboto Mono', monospace;
+}

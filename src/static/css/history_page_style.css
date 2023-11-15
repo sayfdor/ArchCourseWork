@@ -79,16 +79,6 @@ header {
     background-color:rgba(0, 0, 0, .8);
 }
 
-.about_subblock_text {
-    height: 100%;
-    width: 78%;
-
-    font-size: 1.5rem;
-    font-weight: 300;
-
-    font-family: 'Roboto', sans-serif;
-}
-
 .about_title {
     margin: auto;
     z-index: 91;
@@ -110,6 +100,16 @@ header {
     background: #0A0C15;
 
     padding-top: 7vh;
+}
+
+.about_subblock_text {
+    height: 100%;
+    width: 78%;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .about_block {

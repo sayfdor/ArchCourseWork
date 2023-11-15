@@ -5,6 +5,9 @@ body {
     margin: 0;
 }
 
+
+/*HEADER*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -21,8 +24,6 @@ header {
     backdrop-filter: blur(15px);
 }
 
-/*NAVIGATION*/
-
 .nav_logo, .nav_links {
     margin: 0 2rem;
 }
@@ -36,7 +37,7 @@ header {
     font-size: 1.3rem;
 }
 
-.nav_link {
+.nav_link, .ret_link {
     position: relative;
 
     margin: 0 .5rem;
@@ -47,11 +48,16 @@ header {
     transition: opacity .2s linear;
 }
 
-.nav_link:hover {
+.ret_link {
+    text-decoration: underline;
+}
+
+.nav_link:hover, .ret_link:hover {
     opacity: .5;
 }
 
-/*ABOUT_PART*/
+
+/*ABOUT NAVIGATION*/
 
 .about_img {
     display: flex;
@@ -61,7 +67,7 @@ header {
     width: 100%;
     height: 40vh;
 
-    background: url("../img/about_pages/history_page/history_page_title.png") no-repeat;
+    background: url("../img/about_pages/places_page/places_title.png") no-repeat;
     background-size: cover;
 }
 
@@ -79,16 +85,6 @@ header {
     background-color:rgba(0, 0, 0, .8);
 }
 
-.about_subblock_text {
-    height: 100%;
-    width: 78%;
-
-    font-size: 1.5rem;
-    font-weight: 300;
-
-    font-family: 'Roboto', sans-serif;
-}
-
 .about_title {
     margin: auto;
     z-index: 91;
@@ -98,60 +94,139 @@ header {
     font-weight: bold;
 }
 
-.about_main_part {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 33vh);
+    grid-gap: 10vh;
+
+    padding: 10vh;
+
+    width: fit-content;
+
+    margin: auto;
+}
+
+.title_container_cell {
     display: flex;
 
-    flex-direction: column;
+    position: relative;
+
+    width: 33vh;
+    height: 33vh;
+
+    overflow: hidden;
+
+    justify-content: center;
     align-items: center;
 
+    text-transform: none;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.title_container_text {
+    position: absolute;
+
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    color: white;
+
+    opacity: 0;
+}
+
+.title_container_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+
+    transition: scale .2s linear;
+}
+
+.title_container_cell .title_container_img {
+    transition: transform .2s linear,
+    opacity .2s linear;
+}
+
+.title_container_cell:hover .title_container_img {
+    transform: scale(1.2);
+    opacity: .2;
+}
+
+.title_container_cell .title_container_text {
+    transition: opacity .2s linear;
+}
+
+.title_container_cell:hover .title_container_text {
+    opacity: 1;
+}
+
+.title_container_cell:visited, .title_container_cell:focus {
+    color: #ffffff;
+}
+
+
+/*ABOUT BLOCK*/
+
+.about_block {
     width: 100%;
     height: auto;
 
-    background: #0A0C15;
+    border-top: solid .1vh rgba(256, 256, 256, 0.2);
 
-    padding-top: 7vh;
+    padding: 5vh;
 }
 
-.about_block {
-    display: flex;
+.about_block_title {
+    margin: 0 auto 5vh;
 
+    width: 81%;
+
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Ubuntu, sans-serif;
+}
+
+.about_block_content {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    height: auto;
-    width: 70%;
+    width: 81%;
 
-    margin-bottom: 7vh;
+    margin: 0 auto;
 }
 
-.about_subblock_imgblock {
-    display: flex;
-
-    flex-direction: column;
-
-    height: 100%;
-    width: 20%;
+.about_block_picture {
+    width: 33vh;
+    height: 33vh;
 }
 
-.about_subblock_img {
-    height: 80%;
-    width: 100%;
-}
-
-.about_picture {
-    width: 100%;
-    height: 100%;
-
+.about_block_img {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.about_subblock_caption {
-    height: 20%;
-    width: 100%;
+.about_block_text {
+    width: 78%;
 
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: Ubuntu, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.about_block_return {
+    width: 82%;
+
+    margin: auto;
+
+    padding-top: 1rem;
 }
 
 /*FOOTER*/
@@ -163,7 +238,7 @@ footer {
 }
 
 .footer_contacts {
-    border-top: solid 0.02vh rgba(256, 256, 256, 0.2);
+    border-top: solid .1vh rgba(256, 256, 256, 0.2);
 
     padding: 1rem 2rem;
 
@@ -186,42 +261,128 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    .nav_logo {
-        font-size: 1.2rem;
+
+    .intro_title_container {
+        height: 60vh;
     }
 
-    .nav_links {
-        font-size: 1rem;
+    .intro_title_container:before {
+        height: 60vh;
     }
 
-    .about_title {
+    .intro_title {
+        margin: auto;
+        z-index: 91;
+
+        text-transform: uppercase;;
         font-size: 3rem;
+        font-weight: bold;
     }
 
-    .about_subblock_caption {
-        font-size: 2.5rem;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 50vh);
+        grid-gap: 5vh;
+
+        padding: 5vh;
+
+        width: fit-content;
+
+        margin: auto;
+    }
+
+    .title_container_cell {
+        display: flex;
+
+        position: relative;
+
+        width: 50vh;
+        height: 33vh;
+
+        overflow: hidden;
+
+        justify-content: center;
+        align-items: center;
+
+        text-transform: none;
+
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 33vh);
+    }
+
+    .title_container_cell {
+        width: 33vh;
+        height: 33vh;
     }
 }
 
 @media (max-width: 680px) {
+
     header {
         flex-direction: column;
         justify-content: space-around;
     }
 
     .nav_logo {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .nav_links {
-        font-size: .9rem;
+        display: flex;
+        font-size: 1rem;
     }
 
-    .about_title {
+    .intro_title_container {
+        height: 35vh;
+    }
+
+    .intro_title_container:before {
+        height: 35vh;
+    }
+
+    .intro_title {
+        margin: auto;
+        z-index: 91;
+
+        text-transform: uppercase;;
         font-size: 2.5rem;
+        font-weight: bold;
     }
 
-    .about_subblock_caption {
-        font-size: 2rem;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 50vh);
+        grid-gap: 5vh;
+
+        padding: 5vh;
+
+        width: fit-content;
+
+        margin: auto;
     }
+
+    .title_container_cell {
+        display: flex;
+
+        position: relative;
+
+        width: 50vh;
+        height: 33vh;
+
+        overflow: hidden;
+
+        justify-content: center;
+        align-items: center;
+
+        text-transform: none;
+
+        background: rgba(0, 0, 0, 0.1);
+    }
+
 }
